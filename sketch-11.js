@@ -1,14 +1,15 @@
-function setup() {
-  createCanvas(710, 400);
+function setup() { 
+  createCanvas(400, 400);
+} 
+
+function draw() { 
   background(0);
-  strokeWeight(10);
-  frameRate(5);
+  stroke(255);
+
+  for(var posX = 0; posX <= 399; posX += 8){
+  
+  line(posX,400,posX,random(0,400));
+  }
+  
 }
 
-function draw() {
-  for (var i = 0; i < width; i++) {
-    var r = random(255);
-    stroke(r);
-    line(r, i, height, i);
-  }
-}
